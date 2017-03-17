@@ -7,10 +7,21 @@
 <style>
 body {
   background-color: #222222;
+  font-family: sans-serif;
+
 }
 #msg-container {
   background-color:white;
   width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column; /* works with row or column */
+  flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: center
 }
 .flexcontainer {
    display: -webkit-flex;
@@ -33,10 +44,8 @@ body {
     height: 244px;
     /*background-color: #666;*/
 }
-#msg {
-    font-size:5em;
-    font-family: sans-serif;
-  
+#header {
+    font-size:5em;  
 }
 /*#canvas {
     width: 244px;
@@ -53,8 +62,9 @@ body {
 </head>
   
 <body>
-<div class="flexcontainer" id="msg-container">
-  <h1 id="msg">Distracted Driver Detection</h1>
+<div class="plainflex" id="msg-container">
+  <h1 id="header">Distracted Driver Detection</h1>
+  <h1 id="msg">Loading...</h1>
 </div>
 <div class="flexcontainer">
 	<div id="container" style="margin-right: 20px;">
