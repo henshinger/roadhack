@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Display Webcam Stream</title>
+  
+<style>
+#container {
+    /*margin: 0px auto;*/
+    width: 244px;
+    height: 244px;
+    /*border: 10px #333 solid;*/
+}
+#videoElement {
+    width: 244px;
+    height: 244px;
+    background-color: #666;
+}
+#canvas {
+    width: 244px;
+    height: 244px;
+	
+    background-color: #CCC;
+}
+</style>
+    <script src="https://cdn.WebRTC-Experiment.com/MediaStreamRecorder.js"></script>
+
+    <!-- for Edige/FF/Chrome/Opera/etc. getUserMedia support -->
+    <script src="https://cdn.WebRTC-Experiment.com/gumadapter.js"></script>
+    <script src="keras.js"></script>
+</head>
+  
+<body>
+<div id="container">
+    <video autoplay id="videoElement">
+     
+    </video>
+</div>
+
+<canvas id="canvas" width="244" height="244"></canvas>
+
+<script src="bundled.js">
+</script>
+</body>
+</html>
