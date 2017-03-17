@@ -5,10 +5,17 @@
 <title>Distracted Driver Detection</title>
   
 <style>
+body {
+  background-color: #222222;
+}
+#msg-container {
+  background-color:white;
+  width: 100%;
+}
 .flexcontainer {
    display: -webkit-flex;
    display: flex;
-   -webkit-flex-direction: row /* works with row or column */
+   -webkit-flex-direction: row; /* works with row or column */
    flex-direction: row;
    -webkit-align-items: center;
    align-items: center;
@@ -26,6 +33,11 @@
     height: 244px;
     /*background-color: #666;*/
 }
+#msg {
+    font-size:5em;
+    font-family: sans-serif;
+  
+}
 /*#canvas {
     width: 244px;
     height: 244px;
@@ -41,6 +53,9 @@
 </head>
   
 <body>
+<div class="flexcontainer" id="msg-container">
+  <h1 id="msg">Distracted Driver Detection</h1>
+</div>
 <div class="flexcontainer">
 	<div id="container" style="margin-right: 20px;">
 	    <video autoplay id="videoElement">
