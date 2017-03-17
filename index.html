@@ -5,6 +5,16 @@
 <title>Distracted Driver Detection</title>
   
 <style>
+.flexcontainer {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row /* works with row or column */
+   flex-direction: row;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+}
 #container {
     /*margin: 0px auto;*/
     width: 244px;
@@ -31,14 +41,15 @@
 </head>
   
 <body>
-<div id="container">
-    <video autoplay id="videoElement">
-     
-    </video>
+<div class="flexcontainer">
+	<div id="container">
+	    <video autoplay id="videoElement">
+
+	    </video>
+	</div>
+
+	<canvas id="canvas" width="244" height="244"></canvas>
 </div>
-
-<canvas id="canvas" width="244" height="244"></canvas>
-
 <script src="bundled.js">
 </script>
 </body>
