@@ -23,6 +23,17 @@ body {
   justify-content: center;
   text-align: center
 }
+.plainflex {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column; /* works with row or column */
+  flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: center
+}
 .flexcontainer {
    display: -webkit-flex;
    display: flex;
@@ -32,6 +43,7 @@ body {
    align-items: center;
    -webkit-justify-content: center;
    justify-content: center;
+   margin: 20px;
 }
 #container {
     /*margin: 0px auto;*/
@@ -73,8 +85,16 @@ body {
 
 	    </video>
 	</div>
-
-	<canvas id="canvas" width="244" height="244"></canvas>
+</div>
+<div id="imageContainer" style="visibility: hidden;" class="flexcontainer">
+	<div class="plainflex">
+		<h3>Last Image Processed</h3>
+		<canvas id="lastImage" width="244" height="244"></canvas>	
+	</div>
+	<div class="plainflex">
+		<h3>Image Currently Being Processed</h3>
+		<canvas id="canvas" width="244" height="244"></canvas>
+	</div>
 </div>
 <script src="bundled.js">
 </script>
